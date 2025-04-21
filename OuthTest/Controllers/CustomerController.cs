@@ -26,9 +26,6 @@ namespace OAuthTest.Controllers
         [AllowAnonymous]
         public async Task<AuthResultDto> Login([FromBody] LoginForm form) => await _customerService.Login(form);
 
-        [HttpGet("logout")]
-        public async Task<String> Logout() => await _customerService.Logout();
-
         [HttpGet("profile")]
         public async Task<CustomerDto> GetProfile() => await _customerService.GetProfile();
 
